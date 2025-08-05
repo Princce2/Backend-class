@@ -27,6 +27,7 @@ class Category(models.Model):
 
 
 class Article(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=55, unique=True)
     image = models.ImageField(upload_to='images')
     created_at = models.DateTimeField(auto_now_add=True)
