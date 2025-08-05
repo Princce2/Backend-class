@@ -46,130 +46,13 @@
             </div>
         </div>
     </nav>
-
+    {% block content %}
     <!-- Blog List Page -->
-    <div id="listPage" class="pt-24 pb-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <!-- Hero Section -->
-            <div class="text-center mb-16 animate-float">
-                <h2 class="text-6xl font-bold mb-6 gradient-text">Latest Stories</h2>
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Discover cutting-edge insights, innovative ideas, and transformative stories that shape tomorrow.</p>
-            </div>
-
-            <!-- Featured Post -->
-            <div class="mb-16 cursor-pointer group" onclick="showDetail(1)">
-                <div class="relative overflow-hidden rounded-3xl glass p-8 hover:scale-105 transition-all duration-500 animate-glow">
-                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-                    <div class="relative z-10">
-                        <span class="inline-block px-4 py-2 bg-purple-500/30 rounded-full text-sm mb-4">Featured</span>
-                        <h3 class="text-4xl font-bold mb-4 group-hover:text-purple-300 transition-colors">The Future of AI-Driven Design</h3>
-                        <p class="text-gray-300 text-lg mb-6">Exploring how artificial intelligence is revolutionizing creative workflows and reshaping the design industry.</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                                <div>
-                                    <p class="font-semibold">Sarah Chen</p>
-                                    <p class="text-sm text-gray-400">Dec 15, 2024</p>
-                                </div>
-                            </div>
-                            <span class="text-purple-300">8 min read →</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Blog Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <article class="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer group" onclick="showDetail(2)">
-                    <div class="w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl mb-4"></div>
-                    <span class="text-sm text-purple-300">Technology</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-purple-300 transition-colors">Quantum Computing Breakthrough</h3>
-                    <p class="text-gray-300 text-sm mb-4">Revolutionary advances in quantum processing are bringing us closer to solving complex problems.</p>
-                    <div class="flex items-center space-x-2">
-                        <div class="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                        <span class="text-sm text-gray-400">Alex Turner • 5 min read</span>
-                    </div>
-                </article>
-
-                <article class="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer group" onclick="showDetail(3)">
-                    <div class="w-full h-48 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl mb-4"></div>
-                    <span class="text-sm text-green-300">Sustainability</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-green-300 transition-colors">Green Tech Revolution</h3>
-                    <p class="text-gray-300 text-sm mb-4">How innovative green technologies are reshaping industries and creating sustainable futures.</p>
-                    <div class="flex items-center space-x-2">
-                        <div class="w-8 h-8 bg-gradient-to-r from-green-400 to-teal-400 rounded-full"></div>
-                        <span class="text-sm text-gray-400">Maya Patel • 7 min read</span>
-                    </div>
-                </article>
-
-                <article class="glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer group" onclick="showDetail(4)">
-                    <div class="w-full h-48 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl mb-4"></div>
-                    <span class="text-sm text-orange-300">Innovation</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-orange-300 transition-colors">Space Tech Horizons</h3>
-                    <p class="text-gray-300 text-sm mb-4">Exploring the cutting-edge technologies that will define humanity's future in space.</p>
-                    <div class="flex items-center space-x-2">
-                        <div class="w-8 h-8 bg-gradient-to-r from-orange-400 to-red-400 rounded-full"></div>
-                        <span class="text-sm text-gray-400">Dr. James Liu • 12 min read</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div>
+  
 
     <!-- Detail Page -->
-    <div id="detailPage" class="hidden pt-24 pb-16">
-        <div class="max-w-4xl mx-auto px-6">
-            <button onclick="showList()" class="mb-8 flex items-center space-x-2 text-purple-300 hover:text-white transition-colors">
-                <span>← Back to stories</span>
-            </button>
-            
-            <article class="glass rounded-3xl p-8">
-                <div class="mb-8">
-                    <span class="inline-block px-4 py-2 bg-purple-500/30 rounded-full text-sm mb-4">Featured</span>
-                    <h1 class="text-5xl font-bold mb-6 gradient-text">The Future of AI-Driven Design</h1>
-                    <div class="flex items-center space-x-4 mb-8">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                        <div>
-                            <p class="font-semibold">Sarah Chen</p>
-                            <p class="text-sm text-gray-400">Published Dec 15, 2024 • 8 min read</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="prose prose-lg prose-invert max-w-none">
-                    <div class="w-full h-64 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl mb-8"></div>
-                    
-                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">Artificial intelligence is fundamentally transforming how we approach design, creating unprecedented opportunities for creativity and innovation while challenging traditional workflows.</p>
-                    
-                    <h2 class="text-3xl font-bold text-white mb-4">The Design Revolution</h2>
-                    <p class="text-gray-300 mb-6 leading-relaxed">Modern AI tools are not just automating repetitive tasks—they're becoming creative partners that can understand context, generate novel ideas, and adapt to human preferences in real-time.</p>
-                    
-                    <h2 class="text-3xl font-bold text-white mb-4">Key Innovations</h2>
-                    <ul class="text-gray-300 mb-6 space-y-2">
-                        <li>Generative design algorithms that create infinite variations</li>
-                        <li>Smart color palette suggestions based on psychological impact</li>
-                        <li>Automated accessibility improvements</li>
-                        <li>Real-time collaboration between human and AI creativity</li>
-                    </ul>
-                    
-                    <p class="text-gray-300 mb-6 leading-relaxed">The future of design lies not in replacing human creativity, but in amplifying it through intelligent collaboration between designers and AI systems.</p>
-                    
-                    <div class="bg-purple-900/30 p-6 rounded-2xl border border-purple-500/30 mt-8">
-                        <p class="text-purple-200 italic">"AI doesn't replace creativity—it unlocks new dimensions of human imagination we never knew existed."</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-between mt-12 pt-8 border-t border-white/20">
-                    <div class="flex space-x-4">
-                        <button class="px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-full transition-colors">Share</button>
-                        <button class="px-6 py-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors">Save</button>
-                    </div>
-                    <span class="text-sm text-gray-400">1.2k views • 89 likes</span>
-                </div>
-            </article>
-        </div>
-    </div>
-
+    {% endblock %}
     <script>
         function showDetail(id) {
             document.getElementById('listPage').classList.add('hidden');
